@@ -3,15 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.Calculator"
              Title="Calculator">
-    <VerticalStackLayout Spacing="10" Padding="20">
+    <VerticalStackLayout Spacing="60" Padding="30">
         <Label Text="Hesap Makinesi"  
                FontSize="32"  
                HorizontalOptions="Center" />
 
-        <Entry x:Name="ResultEntry" FontSize="24" Placeholder="Sonuç" IsReadOnly="True" HorizontalOptions="FillAndExpand" />
+        <Entry x:Name="ResultEntry" FontSize="24" Placeholder="Sonuç" IsReadOnly="True" Margin="0,0,0,20" />
 
-        <Grid>
-            <!-- Sayı Butonları -->
+        <Grid RowSpacing="20" ColumnSpacing="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -27,31 +26,31 @@
             </Grid.RowDefinitions>
 
             <!--1. Satır -->
-            <Button Text="C" FontSize="Large" Clicked="OnClearButtonClicked" Grid.Row="0" Grid.Column="0" />
-            <Button Text="( )" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="0" Grid.Column="1" />
-            <Button Text="," FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="0" Grid.Column="2" Padding="20"/>
-            <Button Text="/" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="0" Grid.Column="3" />
+            <Button Text="C" FontSize="Large" Clicked="OnClearButtonClicked" Grid.Row="0" Grid.Column="0" Style="{StaticResource ECalculateButton}" />
+            <Button Text="-" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="0" Grid.Column="1" Style="{StaticResource CalculateButton}" />
+            <Button Text="," FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="0" Grid.Column="2" Style="{StaticResource CalculateButton}" />
+            <Button Text="/" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="0" Grid.Column="3" Style="{StaticResource NCalculateButton}" />
 
             <!--2. Satır -->
-            <Button Text="7" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="1" Grid.Column="0" />
-            <Button Text="8" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="1" Grid.Column="1" />
-            <Button Text="9" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="1" Grid.Column="2" />
-            <Button Text="*" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="1" Grid.Column="3" />
+            <Button Text="7" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="1" Grid.Column="0" Style="{StaticResource CalculateButton}" />
+            <Button Text="8" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="1" Grid.Column="1" Style="{StaticResource CalculateButton}" />
+            <Button Text="9" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="1" Grid.Column="2" Style="{StaticResource CalculateButton}"/>
+            <Button Text="*" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="1" Grid.Column="3" Style="{StaticResource NCalculateButton}" />
 
             <!--3. Satır -->
-            <Button Text="4" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="2" Grid.Column="0" />
-            <Button Text="5" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="2" Grid.Column="1" />
-            <Button Text="6" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="2" Grid.Column="2" />
-            <Button Text="+" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="2" Grid.Column="3" />
+            <Button Text="4" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="2" Grid.Column="0" Style="{StaticResource CalculateButton}"/>
+            <Button Text="5" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="2" Grid.Column="1" Style="{StaticResource CalculateButton}"/>
+            <Button Text="6" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="2" Grid.Column="2" Style="{StaticResource CalculateButton}"/>
+            <Button Text="+" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="2" Grid.Column="3" Style="{StaticResource NCalculateButton}" />
 
             <!--4. Satır -->
-            <Button Text="1" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="3" Grid.Column="0" />
-            <Button Text="2" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="3" Grid.Column="1" />
-            <Button Text="3" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="3" Grid.Column="2" />
-            <Button Text="-" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="3" Grid.Column="3" />
+            <Button Text="1" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="3" Grid.Column="0" Style="{StaticResource CalculateButton}"/>
+            <Button Text="2" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="3" Grid.Column="1" Style="{StaticResource CalculateButton}"/>
+            <Button Text="3" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="3" Grid.Column="2" Style="{StaticResource CalculateButton}"/>
+            <Button Text="-" FontSize="Large" Clicked="OnOperatorButtonClicked" Grid.Row="3" Grid.Column="3" Style="{StaticResource NCalculateButton}" />
 
-            <Button Text="0" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="4" Grid.Column="1" />
-            <Button Text="=" FontSize="Large" Clicked="OnEqualsButtonClicked" Grid.Row="4" Grid.Column="3" />
+            <Button Text="0" FontSize="Large" Clicked="OnNumberButtonClicked" Grid.Row="4" Grid.Column="1" Style="{StaticResource CalculateButton}"/>
+            <Button Text="=" FontSize="Large" Clicked="OnEqualsButtonClicked" Grid.Row="4" Grid.Column="3" Style="{StaticResource NCalculateButton}" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

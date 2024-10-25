@@ -28,14 +28,21 @@
         <Setter Property="BorderWidth" Value="4" />
         <Setter Property="TextColor" Value="Black" />
     </Style>
-
+    <Style x:Key="ECalculateButton" TargetType="Button">
+        <Setter Property="CornerRadius" Value="40"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="BackgroundColor" Value="LightPink"
+                />
+    </Style>
     <Style x:Key="CalculateButton" TargetType="Button">
         <Setter Property="CornerRadius" Value="40"/>
-        <Setter Property="TextColor"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="BackgroundColor" Value="MediumPurple"/>
     </Style>
-    <Style x:Key="NCalculateButton" TargetType="Button">
+    <Style x:Key="NCalculateButton" TargetType="Button"> 
         <Setter Property="CornerRadius" Value="40"/>
-        <Setter Property="TextColor"/>
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="TextColor" Value="Black"/>
     </Style>
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
